@@ -7,6 +7,8 @@
 FROM nvidia/cuda:9.2-cudnn7-devel-ubuntu18.04
 LABEL maintainer="Kitware, Inc. <kitware@kitware.com>"
 
+ENV OPENBLAS_NUM_THREADS 1
+
 RUN apt-get update && \
     # We need software-properties-common for add-apt-repository \
     apt-get install --yes --no-install-recommends software-properties-common && \
