@@ -227,6 +227,7 @@ def main(args):
 
             tile_fgnd_frac_list = [1.0] * num_tiles
 
+        tile_fgnd_frac_list = np.array(tile_fgnd_frac_list)
         num_fgnd_tiles = np.count_nonzero(
             tile_fgnd_frac_list >= args.min_fgnd_frac)
 
